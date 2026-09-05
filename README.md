@@ -33,22 +33,23 @@ Built for Shared Financial Services (CIDRE IFD), this decoupled system eliminate
 
 ## 🏗️ 2. System Architecture & Data Flow
 
-[Google Drive Input Folder]
-│
-▼ (Daily Cron Trigger - Apps Script)
+```text
+[Google Drive Input Folder] 
+       │
+       ▼ (Daily Cron Trigger - Apps Script)
 [Auto-Ingestion & E.164 Sanitization]
-│
-▼
+       │
+       ▼
 [Anti-Duplication Check (ScriptProperties)]
-│
-├──► [Match Found] ──► Log as Omitted (Yellow Status)
-│
-└──► [New Record]  ──► [Atom Webhook API Trigger (POST)]
-│
-├──► Dispatches WhatsApp HSM ('envios_cumpleanos_cidre')
-├──► Auto-closes thread ('RB - Resuelto por Bot')
-└──► Dispatches Daily Executive HTML Audit Email
-
+       │
+       ├──► [Match Found] ──► Log as Omitted (Yellow Status)
+       │
+       └──► [New Record]  ──► [Atom Webhook API Trigger (POST)]
+                                       │
+                                       ├──► Dispatches WhatsApp HSM ('envios_cumpleanos_cidre')
+                                       ├──► Auto-closes thread ('RB - Resuelto por Bot')
+                                       └──► Dispatches Daily Executive HTML Audit Email
+```
 ---
 
 ## ⚙️ 3. Key Technical Capabilities
@@ -58,8 +59,6 @@ Built for Shared Financial Services (CIDRE IFD), this decoupled system eliminate
 3. **Persistent Deduplication Lock:** Uses Google Apps Script `PropertiesService` to maintain a memory lock for 24-hour windows.
 4. **Resilient Drive File Management:** Automates file state transitions from `01_Input` to `02_Processed` post-execution with full error trapping.
 5. **Branded HTML Executive Reporter:** Compiles daily execution metrics, processed source files, and individual transaction statuses into a responsive HTML email layout.
-
----
 
 ## 🛠️ 4. Configuration & Deployment
 
@@ -92,6 +91,16 @@ const CONFIG = {
 
 2. README.md: System documentation, business architecture, and setup guide.
 
+## 📂 6. Estructura recomendada para el repositorio
+Nombre sugerido del repositorio: whatsapp-birthday-crm-automation
+
+```text
+whatsapp-birthday-crm-automation/
+├── .gitignore
+├── README.md             // System documentation, business architecture, and setup guide.
+└── appscript_master.js  // Complete Google Apps Script backend containing drive processing, API webhooks, deduplication logic, and HTML email generator.
+
+```
 ## 👤 Author
 ### Michael Sancivier
 ### Technical Onboarding & CSM Specialist | RevOps Process Strategist
