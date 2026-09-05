@@ -66,9 +66,9 @@ Built for Shared Financial Services (CIDRE IFD), this decoupled system eliminate
 
 ```javascript
 const CONFIG = {
-  CLIENTE_NOMBRE: "CIDRE IFD",
-  EMAIL_CONTACTO_CLIENTE: "Katia",
-  EMAILS_NOTIFICACION: "michael.sancivier@atomchat.io, khuici@cidre.org.bo",
+  CLIENTE_NOMBRE: "Cliente",
+  EMAIL_CONTACTO_CLIENTE: "Michael",
+  EMAILS_NOTIFICACION: "msancivier@mail.com, khuici@mail.com",
   
   // Webhook Integration
   ATOM_WEBHOOK_URL: "[https://api.atomchat.io/v1/webhooks/hsm/trigger](https://api.atomchat.io/v1/webhooks/hsm/trigger)",
@@ -86,13 +86,6 @@ const CONFIG = {
 ```
 
 ## 📂 5. Repository Structure
-
-1. appscript_master.js: Complete Google Apps Script backend containing drive processing, API webhooks, deduplication logic, and HTML email generator.
-
-2. README.md: System documentation, business architecture, and setup guide.
-
-## 📂 6. Estructura recomendada para el repositorio
-Nombre sugerido del repositorio: whatsapp-birthday-crm-automation
 
 ```text
 whatsapp-birthday-crm-automation/
