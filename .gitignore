@@ -1,0 +1,6 @@
+# Credentials and local environment files
+.clasp.json
+.clasp-ignore
+creds.json
+.env
+*.log
