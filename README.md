@@ -68,11 +68,11 @@ Built for Shared Financial Services (CIDRE IFD), this decoupled system eliminate
 const CONFIG = {
   CLIENTE_NOMBRE: "Cliente",
   EMAIL_CONTACTO_CLIENTE: "Michael",
-  EMAILS_NOTIFICACION: "msancivier@mail.com, khuici@mail.com",
+  EMAILS_NOTIFICACION: "msancivier@mail.com, otroemail@mail.com",
   
   // Webhook Integration
-  ATOM_WEBHOOK_URL: "[https://api.atomchat.io/v1/webhooks/hsm/trigger](https://api.atomchat.io/v1/webhooks/hsm/trigger)",
-  ATOM_TOKEN: "YOUR_BEARER_TOKEN_HERE",
+  WEBHOOK_URL: "[https://api.empresa.com/v1/webhooks/hsm/trigger](https://api.empresa.com/v1/webhooks/hsm/trigger)",
+  TOKEN: "YOUR_BEARER_TOKEN_HERE",
   
   // Drive Repositories
   FOLDER_ENTRADA_ID: "YOUR_INPUT_FOLDER_ID",
